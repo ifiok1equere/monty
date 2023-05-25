@@ -42,4 +42,5 @@ int check_argument(char *str, unsigned int line_number);
 int check_opcode(char *opcode, int line_number);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);
+void op_pint(stack_t **stack, unsigned int line_number);
 #endif /* #ifndef MONTY_H */

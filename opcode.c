@@ -52,3 +52,21 @@ void op_pall(stack_t **stack, unsigned int line_number)
 	}
 	return;
 }
+
+/**
+ * op_pint -  function that prints the top element of the stack.
+ * @stack: pointer to the head node of the linked list
+ * @line_number: file line where instruction was found.
+ * Return: number of nodes in the list
+ */
+void op_pint(stack_t **stack, unsigned int line_number)
+{
+	stack_t *ptr;
+
+	(void)line_number;
+	if (*stack == NULL)
+		return;
+	ptr = *stack;
+	printf("%d\n", ptr->n);
+	return;
+}

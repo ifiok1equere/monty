@@ -8,7 +8,8 @@
 void (*get_op_func(char *op_code))(stack_t **head, unsigned int line_number)
 {
 
-	instruction_t ops[] = {{"push", op_push}, {"pall", op_pall}, {NULL, NULL}};
+	instruction_t ops[] = {{"push", op_push}, {"pall", op_pall},
+		{"pint", op_pint}, {NULL, NULL}};
 	int i = 0;
 
 	while (i < 3)
