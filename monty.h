@@ -36,7 +36,7 @@ typedef struct instruction_s
 } instruction_t;
 void (*get_op_func(char *))(stack_t **, unsigned int);
 void process_file(char *filename);
-int check_argument(char *str);
+int check_argument(char *str, char *opcode, unsigned int line_number);
 int check_opcode(char *opcode, int line_number);
 void op_push(stack_t **stack, unsigned int line_number);
 void op_pall(stack_t **stack, unsigned int line_number);

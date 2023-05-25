@@ -4,17 +4,19 @@
  * @str: pointer to the opcode number argument
  * Return: 1 if is a number, 0 if it is not
  */
-int check_argument(char *str)
+int check_argument(char *str, char *opcode, unsigned int line_number)
 {
 	while (*str)
 	{
 		if (!isdigit(*str))
+		{
+			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 			return (0);
+		}
 		str++;
 	}
 	return (1);
 }
-
 /**
  * check_opcode - function checks validity of monty opcode
  * @opcode: code instruction to be implemented
