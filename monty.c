@@ -17,7 +17,10 @@ int main(int argc, char *argv[])
 	}
 	filename = argv[1];
 	if (!ext_check(filename))
+	{
+		fprintf(stderr, "Error: Can't open file %s\n", filename);
 		exit(EXIT_FAILURE);
+	}
 	process_file(filename);
 
 	return (0);

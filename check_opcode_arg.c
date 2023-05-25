@@ -2,6 +2,7 @@
 /**
  * check_argument - checks if monty opcode arg is a number
  * @str: pointer to the opcode number argument
+ * @line_number: line with opcode instruction
  * Return: 1 if is a number, 0 if it is not
  */
 int check_argument(char *str, unsigned int line_number)
@@ -42,4 +43,21 @@ int check_opcode(char *opcode, int line_number)
 	}
 	fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
 	return (0);
+}
+
+/**
+ * _malloc - dynamically allocate memory
+ * @buf: pointer to allocated memory
+ * Return: pointer to allocated memory
+ */
+
+char *_malloc(char *buf)
+{
+	buf = malloc(1024);
+	if (buf == NULL)
+	{
+		printf("Error: malloc failed");
+		return (NULL);
+	}
+	return (buf);
 }
