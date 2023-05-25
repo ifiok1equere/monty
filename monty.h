@@ -34,6 +34,7 @@ typedef struct instruction_s
 	char *opcode;
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+int ext_check(char *);
 void (*get_op_func(char *))(stack_t **, unsigned int);
 void process_file(char *filename);
 int check_argument(char *str, unsigned int line_number);

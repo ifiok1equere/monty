@@ -16,6 +16,8 @@ int main(int argc, char *argv[])
 		exit(EXIT_FAILURE);
 	}
 	filename = argv[1];
+	if (!ext_check(filename))
+		exit(EXIT_FAILURE);
 	process_file(filename);
 
 	return (0);
