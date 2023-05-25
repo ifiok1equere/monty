@@ -4,13 +4,13 @@
  * @str: pointer to the opcode number argument
  * Return: 1 if is a number, 0 if it is not
  */
-int check_argument(char *str, char *opcode, unsigned int line_number)
+int check_argument(char *str, unsigned int line_number)
 {
 	while (*str)
 	{
 		if (!isdigit(*str))
 		{
-			fprintf(stderr, "L%d: unknown instruction %s\n", line_number, opcode);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			return (0);
 		}
 		str++;

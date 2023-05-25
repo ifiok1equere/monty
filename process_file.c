@@ -31,7 +31,7 @@ void process_file(char *filename)
 		if ((strcmp(op_str, "pall") != 0) && strcmp(op_str, "pint") != 0)
 		{
 			argument = strtok(NULL, " \t");
-			if (argument == NULL || !check_argument(argument, op_str, line_number))
+			if (argument == NULL || !check_argument(argument, line_number))
 				exit(EXIT_FAILURE);
 			data_ = atoi(argument);
 		}
